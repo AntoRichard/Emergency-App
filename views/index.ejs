@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>MEDAPP</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    .button {
+      padding: 15px 25px;
+      font-size: 24px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #D8BFD8; 
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #999;
+    }
+
+    .button:hover {
+      background-color: #C0C0C0
+    }
+
+  
+
+    .button:active {
+      background-color: #C0C0C0;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+  </style>
+
+</head>
+
+<body background="gradient blue.png" height="500px" width="1200px">
+  <header>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">MEDAPP</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="/FirstAid">First Aid</a></li>
+          <li><a href="/alert">Emergency</a></li>
+        </ul>
+      </div>
+      <div class="jumbotron" style="color:black;">
+        <div class="container text-center">
+          <h1 style="font-family:Georgia;"><img src="images/hospitalLogo.png" alt="" height="6%" width="6%">&nbsp;MEDAPP</h1>
+          <h5><i>Caring For The Growing Needs of Our Community</i></h5>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <h3>CLICK HERE FOR FIRST AID</h3>
+        <button class="button"><a href="/FirstAid">FIRST AID</a> </button>
+      </div>
+      <div class="col-lg-3">
+        <h3> CLICK HERE FOR EMERGENCIES</h3>
+        <button class="button"><a href="/alert"><span style="color:red;">EMERGENCY</span></a> </button>
+      </div>
+      <div class="col-lg-6">
+        <img src="/images/worldMap.png" alt="">
+      </div>
+    </div>
+    <footer style="background-color: black">
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Complex Marker Icons</title>
+    <style>
+      #map {
+        height: 100%;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: {lat: 12.890433, lng: 79.8803135}
+        });
+        let uluru = {lat: 12.890433, lng: 79.8803135};
+        var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 12, center: uluru});
+        var marker = new google.maps.Marker({position: uluru, map: map});
+
+        setMarkers(map);
+      }
+      var beaches = [
+        ['Sri Devi Hospital',12.9671034,79.943477, 4],
+        ['Jaya Hospital',12.9701658,79.950132, 5],
+        ['Government Hospital', 12.9177722,79.905485, 3],
+        ['Pandian Hospital',12.9655148,79.9430831, 2],
+        ['Deepika Eye Care Hospital', 12.9513975,79.9366294, 1],
+        ['Sri Sarada Hospital',12.9671024,79.9446193, 4],
+        ['KMT Ayurveda Hospital',12.983399,79.9336483, 5],
+        ['Sub Health Center', 12.959565,79.939820, 3],
+        ['DOC Medical Service',12.9521818,79.9373354, 2],
+        ['Viswananda Heritage Life Science clinic', 12.9669985,79.9408186, 1]
+      ];
+
+      function setMarkers(map) {
+        var image = {
+          url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          // This marker is 20 pixels wide by 32 pixels high.
+          size: new google.maps.Size(20, 32),
+          // The origin for this image is (0, 0).
+          origin: new google.maps.Point(0, 0),
+          // The anchor for this image is the base of the flagpole at (0, 32).
+          anchor: new google.maps.Point(0, 32)
+        };
+        
+        var shape = {
+          coords: [1, 1, 1, 20, 18, 20, 18, 1],
+          type: 'poly'
+        };
+        for (var i = 0; i < beaches.length; i++) {
+          var beach = beaches[i];
+          var marker = new google.maps.Marker({
+            position: {lat: beach[1], lng: beach[2]},
+            map: map,
+            icon: image,
+            shape: shape,
+            title: beach[0],
+            zIndex: beach[3]
+          });
+        }
+
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD37UizytAiQ7AefQr-4WqfcWFa6FZajw0&callback=initMap">
+    </script>
+  </body>
+</html>

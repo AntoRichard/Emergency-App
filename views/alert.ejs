@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MEDAPP | ALERT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+.button {
+  margin-top:50;
+  margin-left:50;
+  padding: 15px 25px;
+  background-color: #cc3300;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  font-family:
+  margin: 4px 2px;
+  cursor: pointer;
+  box-shadow: 0 9px #999;
+}
+.button5 {border-radius: 60%;}
+
+.button:hover {background-color: #cc3300 }
+
+.button:active {
+  background-color: #FF0000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+h3{
+color:#cc3300;
+font-family:courier;
+}
+.button1 {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #D8BFD8; //font color tistle
+  background-color: #808080;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button1:hover {background-color: #C0C0C0}//green
+
+.button1:active {
+  background-color: #C0C0C0;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+<body background="gradient blue2.png" height="100%" width="100%" style="background-repeat:no-repeat;background-size:cover;">
+  <header>
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">MEDAPP</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/">Home</a></li>
+      <li class="active"><a href="/alert">Emergency</a></li>
+      <li><a href="/FirstAid">First Aid</a></li>
+    </ul>
+  </div> 
+  <div class="jumbotron" style="color:black;">
+   <div class="container text-center">
+   <h1 style= "font-family:Georgia;"><img src="images/bell.png" alt="" height="6%" width="6%">&nbsp;EMERGENCY</h1>
+   </div>
+  </div>
+  </nav>
+  </header>
+<center>
+<div class="row">
+<h3><b>For Ambulance Service (click Alert)</b></h3>
+<a href="/findLocation" class="button button5">ALERT</a><br><br><br>
+<div>
+  <h3><b>TO VIEW THE HOSPITAL DETAILS</b></h3>
+      <button class="button1"><a href="/details">CLICK HERE</a></button>
+      </div>
+</div>
+</center>
+</body>
+</html>
